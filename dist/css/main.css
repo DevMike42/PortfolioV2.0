@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -60,14 +60,14 @@
       background-image: url("../img/portrait.jpg");
       background-repeat: none;
       border-radius: 50%;
-      border: solid 3px #1bf0de; }
+      border: solid 3px #00CCCC; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.3s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #1bf0de; }
+      color: #00CCCC; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -79,7 +79,7 @@
     text-decoration: none;
     transition: all 0.3s ease-out; }
     .menu .nav-link:hover {
-      color: #1bf0de; }
+      color: #00CCCC; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -137,13 +137,17 @@ a {
   color: #fff;
   text-decoration: none; }
 
+.heading-secondary {
+  color: #00CCCC; }
+
 header {
   position: fixed;
   z-index: 2;
   width: 100%; }
 
 .text-secondary {
-  color: #1bf0de; }
+  color: #00CCCC;
+  font-size: 2rem; }
 
 main {
   padding: 4rem;
@@ -153,7 +157,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #1bf0de;
+        color: #00CCCC;
         transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
@@ -175,20 +179,35 @@ main {
     background-position: 0;
     background-repeat: none;
     border-radius: 50%;
-    border: solid 3px #1bf0de; }
+    border: solid 3px #00CCCC; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
+    font-size: 1rem; }
+
+.skills-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'skill1 skill2 skill3';
+  grid-template-columns: repeat(3, 1fr); }
+  .skills-info h3 {
+    font-size: 1.5rem;
+    text-decoration: underline; }
+  .skills-info .skill-1 {
+    grid-area: skill1; }
+  .skills-info .skill-2 {
+    grid-area: skill2; }
+    .skills-info .skill-2 ul {
+      columns: 2; }
+  .skills-info .skill-3 {
+    grid-area: skill3; }
+  .skills-info .skill {
     background: #515151;
-    padding: 0.5rem;
-    border-bottom: #1bf0de 5px solid; }
+    padding: 1rem;
+    border-bottom: #00CCCC 5px solid; }
+  .skills-info ul {
+    list-style: none; }
+  .skills-info ul li:before {
+    content: '\2713  '; }
 
 .projects {
   display: grid;
@@ -199,27 +218,8 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #1bf0de;
+      border-color: #00CCCC;
       transition: all 0.3s ease-out; }
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.3s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #1bf0de;
-      color: #000; }
-      .boxes div:hover span {
-        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -227,8 +227,8 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #1bf0de;
-    color: #000; }
+    background: #00CCCC;
+    color: #fff; }
 
 .btn-dark {
   background: black;
@@ -279,7 +279,10 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio';
+    grid-template-columns: 1fr; }
+  .skills-info {
+    grid-template-areas: 'skill1' 'skill2' 'skill3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

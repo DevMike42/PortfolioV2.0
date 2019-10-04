@@ -57,10 +57,15 @@
     .about-info {
         grid-template-areas: 
         'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3';
+        'bio';
+        grid-template-columns: 1fr;
+    }
+
+    .skills-info {
+        grid-template-areas: 
+        'skill1'
+        'skill2'
+        'skill3';
         grid-template-columns: 1fr;
     }
 
