@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+.heading-secondary {
+  color: $secondary-color;
+}
+
 header {
   position: fixed;
   z-index: 2;
@@ -46,6 +50,7 @@ header {
 
 .text-secondary {
   color: $secondary-color;
+  font-size: 2rem;
 }
 
 main {
@@ -98,25 +103,52 @@ main {
   
   .bio {
     grid-area: bio;
+    font-size: 1rem;
+  }
+}
+
+.skills-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+  'skill1 skill2 skill3';
+  grid-template-columns: repeat(3, 1fr);
+
+  h3 {
     font-size: 1.5rem;
+    text-decoration: underline;
   }
-  
-  .job-1 {
-    grid-area: job1;
+
+  .skill-1 {
+    grid-area: skill1;
   }
-  
-  .job-2 {
-    grid-area: job2;
+
+  .skill-2 {
+    grid-area: skill2;
+
+    ul {
+      columns: 2;
+    }
   }
-  
-  .job-3 {
-    grid-area: job3;
+
+  .skill-3 {
+    grid-area: skill3;
   }
-  
-  .job {
+
+  .skill {
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
+    padding: 1rem;
     border-bottom: $secondary-color 5px solid;
+  }
+
+  ul {
+    list-style: none;
+    // width: 70%;
+    // margin: auto;
+  }
+
+  ul li:before {
+    content: '\2713  '
   }
 }
 
@@ -139,31 +171,31 @@ main {
 }
 
 // Contact Page
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
+// .boxes {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   margin-top: 1rem;
 
-  div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut();
+//   div {
+//     font-size: 2rem;
+//     border: 3px #fff solid;
+//     padding: 1.5rem 2.5rem;
+//     margin-bottom: 3rem;
+//     @include easeOut();
 
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
+//     &:hover {
+//       padding: 0.5rem 1.5rem;
+//       background: $secondary-color;
+//       color: set-text-color($secondary-color);
 
-      span {
-        color: set-text-color($secondary-color);
-      }
-    }
-  }
-}
+//       span {
+//         color: set-text-color($secondary-color);
+//       }
+//     }
+//   }
+// }
 
 // Button styles
 .btn {
@@ -190,6 +222,7 @@ main {
   color: #333;
 }
 
+// Footer
 #main-footer {
   text-align: center;
   padding: 1rem;
