@@ -55,6 +55,15 @@
     }
 
     .about-info {
+
+        .bio-image {
+            background-image: url(../img/portrait-sml.jpg);
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .about-info {
         grid-template-areas: 
         'bioimage'
         'bio';
