@@ -197,7 +197,8 @@ main {
   .skills-info .skill-2 {
     grid-area: skill2; }
     .skills-info .skill-2 ul {
-      columns: 2; }
+      columns: 2;
+      padding-left: .5rem; }
   .skills-info .skill-3 {
     grid-area: skill3; }
   .skills-info .skill {
@@ -206,8 +207,6 @@ main {
     border-bottom: #00CCCC 5px solid; }
   .skills-info ul {
     list-style: none; }
-  .skills-info ul li:before {
-    content: '\2713  '; }
 
 .projects {
   display: grid;
