@@ -207,8 +207,6 @@ main {
     border-bottom: #00CCCC 5px solid; }
   .skills-info ul {
     list-style: none; }
-  .skills-info ul li:before {
-    content: '\2713  '; }
 
 .projects {
   display: grid;
